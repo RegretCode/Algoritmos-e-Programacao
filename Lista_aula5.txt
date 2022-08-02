@@ -1,0 +1,348 @@
+/*
+//4.1.Escreva um algoritmo para ler as notas da 1a e 2a avaliações de um aluno, calcular a média e escrever se este aluno
+// foi APROVADO, REPROVADO ou se está em EXAME. Escrever também a média calculada. OBS: Para ter direito ao exame o aluno deve obter média mínima 3.0.
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL,"Portuguese");
+
+float nota1, nota2, media;
+
+printf("Digite a primeira nota: \n");
+scanf("%f", &nota1);
+printf("Digite a segunda nota: \n");
+scanf("%f", &nota2);
+
+media = (nota1+nota2)/2;
+
+if (media >=3 && media <7)
+	{
+		printf("Media minima para EXAME = 3.0\n");
+		printf("Media %.2f - Em EXAME\n", media);
+	}
+else
+{
+	if (media >= 7)
+	{
+	printf("Media %.2f - APROVADO\n", media);
+	}
+	
+	else
+	{
+		printf("Media %.2f - REPROVADO\n", media);
+	}
+}
+
+return 0;
+}
+*/
+
+/*
+//4.2.Escreva um algoritmo para ler o número de gols marcados pelo Grêmio e o número de gols marcados
+// pelo Inter em um GRENAL. Escrever o nome do vencedor. Caso não haja vencedor deverá ser impresso a palavra EMPATE.
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL,"Portuguese");
+	
+int golgremio, golinter;
+
+printf("Digite quantos gols o Gremio fez: \n");
+scanf("%d", &golgremio);
+printf("Digite quantos gols o Inter fez: \n");
+scanf("%d", &golinter);
+
+if (golgremio == golinter)
+{
+	printf("EMPATE");
+}
+else
+{
+	if (golgremio > golinter)
+	{
+		printf("Vitória do Gremio");
+	}
+	else
+	{
+		printf("Vitória do Inter");
+	}
+}
+	
+	
+	return 0;
+}
+*/
+
+/*
+//4.3.Escreva um algoritmo para ler o número de lados de um polígono regular,
+//e a medida do lado(a medida do lado só deve ser lida para polígono com 3 ou 4 lados). Calcular e imprimir o seguinte:
+//Se o número de lados for igual a 3 escrever TRIÂNGULO e o valor do seu perímetro.
+//Se o número de lados for igual a 4 escrever QUADRADO e o valor da sua área.
+//Se o número de lados for igual a 5 escrever PENTÁGONO.
+//OBS: Considere que o usuário só informará os valores 3,4 ou 5.
+
+// 4.4.Acrescente as seguintes mensagens a solução do exercício anterior conforme o caso.
+// Caso o número de lados seja inferior a 3 escrever NÃO E’ UM POLÍGONO.
+// Caso o número de lados seja superior a 5 escrever POLÍGONO NÃO IDENTIFICADO.
+// OBS: Considere que o usuário poderá informar qualquer valor para o número de lados.
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL,"Portuguese");
+
+	int numerolados, medidalados, perimetro, area;
+	
+	
+	printf("Digite o número de lados: \n");
+	scanf("%d", &numerolados);
+		
+		if (numerolados < 3)
+		{
+			printf("NÃO É UM POLÍGONO \n");
+		}
+		else
+		{
+
+		if (numerolados > 5)
+		{
+			printf("POLÍGONO NÃO IDENTIFICADO \n");
+		}
+		else 
+			{
+		
+		if (numerolados == 5)
+	{
+		printf("Pentágono \n");
+	}
+	else
+				{
+
+	printf("Digite a medida dos lados: \n");
+	scanf("%d", &medidalados);
+	
+	perimetro = (medidalados+medidalados+medidalados);
+	area = (medidalados*medidalados);
+	
+	if (numerolados == 3)
+	{
+		printf("Triângulo \n");
+		printf("Perímetro = %d \n", perimetro);
+	}
+	if (numerolados == 4)
+	{
+		printf("Quadrado \n");
+		printf("Área = %d \n", area);
+	}
+
+				}
+			}
+		}
+	return 0;
+}
+*/
+
+/*
+//4.5.Escreva um algoritmo para ler 2 valores e uma das seguintes operações a serem executadas
+//(codificada da seguinte forma: 1.Adição, 2.Subtração, 3.Divisão, 4.Multiplicação). Calcular e escrever o
+//resultado dessa operação sobre os dois valores lidos.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL,"Portuguese");
+	
+float valor1, valor2, adc, sub, div, mult, operador;
+
+printf("CALCULADORA SIMPLES\n");
+
+printf("\nQual operção deseja fazer?\n");
+printf("Para Adição, digite: 1.\nPara Subtração, digite: 2.\nPara Divisão, digite: 3.\nPara Multiplicação, digite: 4.\n");
+scanf("%f", &operador);
+
+
+printf("Digite o primeiro valor: \n");
+scanf("%f", &valor1);
+printf("Digite o segundo valor: \n");
+scanf("%f", &valor2);
+
+adc = (valor1+valor2);
+sub = (valor1-valor2);
+div = (valor1/valor2);
+mult = (valor1*valor2);
+
+
+
+if (operador == 1)
+{
+	printf("O resultado da ADIÇÃO de %.2f + %.2f = %.2f", valor1, valor2, adc);
+}
+if (operador == 2)
+{
+	printf("O resultado da SUBTRAÇÃO de %.2f - %.2f = %.2f", valor1, valor2, sub);
+}
+if (operador == 3)
+{
+	printf("O resultado da DIVISÃO de %.2f / %.2f = %.2f", valor1, valor2, div);
+}
+if (operador == 4)
+{
+	printf("O resultado da MULTIPLICAÇÃO de %.2f * %.2f = %.2f", valor1, valor2, mult);
+}
+
+	return 0;
+}
+*/
+
+/*
+//4.6.Escreva um algoritmo para ler 3 valores e escrever o maior deles. Considere que os usuário não informará valores iguais.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL,"Portuguese");
+	
+	int valor1, valor2, valor3;
+	
+	printf("Digite o primeiro valor: \n");
+	scanf("%d", &valor1);
+	printf("Digite o segundo valor: \n");
+	scanf("%d", &valor2);
+	printf("Digite o terceiro valor: \n");
+	scanf("%d", &valor3);
+	
+	if (valor1 > valor2 && valor1 > valor3)
+	{
+		printf("O valor %d é o maior", valor1);
+	}
+	if (valor2 > valor1 && valor2 > valor3)
+	{
+		printf("O valor %d é o maior", valor2);
+	}
+	if (valor3 > valor1 && valor3 > valor2)
+	{
+		printf("O valor %d é o maior", valor3);
+	}
+
+
+	return 0;
+}
+*/
+
+/*
+//4.7.Escreva um algoritmo para ler 3 valores e escrever a soma dos 2 maiores. Considere que os usuário não informará valores iguais.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL,"Portuguese");
+	
+	int valor1, valor2, valor3;
+	
+	printf("Digite o primeiro valor: \n");
+	scanf("%d", &valor1);
+	printf("Digite o segundo valor: \n");
+	scanf("%d", &valor2);
+	printf("Digite o terceiro valor: \n");
+	scanf("%d", &valor3);
+	
+	if(valor1 > valor2 && valor1 > valor3 && valor2 > valor3) 
+	{
+		valor1 = valor1+valor2;
+		printf("A soma dos dois maiores numeros será: %d", valor1);
+	}
+	if(valor2 > valor1 && valor2 > valor3 && valor3 > valor1)
+	{
+		valor2 = valor2+valor3;
+		printf("A soma dos dois maiores numeros será: %d", valor2);
+	}
+	if(valor3 > valor1 && valor3 > valor2 && valor2 > valor1)
+	{
+		valor3 = valor3+valor2;
+		printf("A soma dos dois maiores numeros será: %d", valor3);
+	}
+	
+	return 0;
+}
+*/
+
+/*
+//4.9.Escreva um algoritmo para ler as coordenadas (X,Y) de um ponto no sistema cartesiano e escrever o
+//quadrante ao qual o ponto pertence. Considere que o usuário não informará nenhuma coordenada igual a //zero.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL,"Portuguese");
+
+int x, y;
+
+printf("Escreva a coordenada de X no plano cartesiano: \n");
+scanf("%d", &x);
+printf("Escreva a coordenada de Y no plano cartesiano: \n");
+scanf("%d", &y);
+
+	if (x > 0 && y > 0)
+	{
+		printf("%d(x) e %d(y) pertencem ao quadrante I.\n", x, y);
+	}
+	if (x < 0 && y > 0)
+	{
+		printf("%d(x) e %d(y) pertencem ao quadrante II.\n", x, y);
+	}
+	if (x < 0 && y < 0)
+	{
+		printf("%d(x) e %d(y) pertencem ao quadrante III.\n", x, y);
+	}
+	if (x > 0 && y < 0)
+	{
+		printf("%d(x) e %d(y) pertencem ao quadrante IV.\n", x, y);
+	}
+	//4.10.Escreva um algoritmo para ler as coordenadas (X,Y) de um ponto no sistema cartesiano e escrever o
+	//quadrante ao qual o ponto pertence. Se o ponto estiver sobre os eixos, ou na origem, escrever NÃO ESTÁ
+	//EM NENHUM QUADRANTE. Considere que o usuário poderá informar qualquer valor para as coordenadas.
+	if (x == 0 && y == 0)
+	{
+		printf("NÃO ESTÁ EM NENHUM QUADRANTE.\n");
+	}
+	if (x == 0 && y > 0)
+	{
+		printf("NÃO ESTÁ EM NENHUM QUADRANTE.\n");
+	}
+	if (x == 0 && y < 0)
+	{
+		printf("NÃO ESTÁ EM NENHUM QUADRANTE.\n");
+	}
+	if (x > 0 && y == 0)
+	{
+		printf("NÃO ESTÁ EM NENHUM QUADRANTE.\n");
+	}
+	if (x < 0 && y == 0)
+	{
+		printf("NÃO ESTÁ EM NENHUM QUADRANTE.\n");
+	}
+	return 0;
+}
+*/

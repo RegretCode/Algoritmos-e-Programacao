@@ -1,0 +1,272 @@
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+//Exercicio: Construir um algoritmo que dados dois números escreva o maior.
+int main(){
+	setlocale(LC_ALL,"Portuguese");
+	
+	int valor1, valor2;
+
+      printf("Digite um valor: \n");	//codigo para mostrar msg ao usuario
+	  scanf("%d", &valor1);      //codigo para ler a msg do usuario
+	  printf("Digite mais um valor: \n");
+      scanf("%d", &valor2);	
+	
+	if (valor1 > valor2)
+	{
+		printf("%d é maior que %d. \n", valor1, valor2);
+	}
+	
+	else {
+		printf("%d é maior que %d. \n", valor2, valor1);
+	}
+
+	
+	return 0;
+}
+*/
+
+/*
+//Faça um algoritmo que leia um número e mostre se ele é positivo, negativo ou zero.
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL,"Portuguese");
+	int numero;
+	
+	  printf("Digite um número: \n");
+	  scanf("%d", &numero);
+	  
+	  if (numero == 0)
+	  {
+	  	printf("O número é o próprio %d.\n", numero);
+	  }
+	  if (numero > 0) 
+	  {
+	  	printf("O número %d é positivo.\n", numero);
+	  }
+	  
+	  else (numero < 0);
+	  {
+	  	printf("O número %d é negativo.\n", numero);
+	  }
+	
+	
+	
+	
+	
+	
+	return 0;
+}
+*/
+
+/*
+//3.Escrever um algoritmo que leia uma nota e mostre o conceito equivalente. Suponha a seguinte tabela de conversão.
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL,"Portuguese");
+
+float nota;
+
+printf("Digite sua nota:\n");
+scanf("%2f", &nota);
+
+if (nota >=0 && nota <= 5)
+{
+	printf("Nota %2.f entre 0.0 e 5.0\n", nota);
+	printf("Conceito: D\n");
+}
+if (nota > 5 && nota <= 7)
+{
+	printf("Nota %2.f entre 5.0 e 7.0\n", nota);
+	printf("Conceito: C\n");
+}
+if (nota > 7 && nota <= 9)
+{
+	printf("Nota %2.f entre 7.0 e 9.0\n", nota);
+	printf("Conceito: B\n");
+}
+if (nota > 9 && nota <= 10)
+{
+	printf("Nota %2.f entre 9.0 e 10.0\n", nota);
+	printf("Conceito: C\n");
+}
+
+	
+	return 0;
+}
+*/
+
+/*
+//. Faça um algoritmo que leia 3 números e diga se podem ser lados de um triângulo. Observe: A, B e C são lados de um triângulo se: A < (B+C) e B < (C+A) e C < (A+B).
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL,"Portuguese");
+
+int a, b, c;
+
+printf("Digite o valor para um dos lados de um triângulo: \n");
+scanf("%d", &a);
+printf("Digite o valor para um dos lados de um triângulo: \n");
+scanf("%d", &b);
+printf("Digite o valor para um dos lados de um triângulo: \n");
+scanf("%d", &c);
+
+if (a < (b+c) && b < (c+a) && c < (a+b))
+{
+	printf("Pode ser lados de um triâmgulo.\n");
+}
+	else
+	{
+		printf("Não podem ser lados de um triângulo");
+	}
+	
+	
+	return 0;
+}
+*/
+
+
+//Elabore um algoritmo que, dada a idade de um nadador classifica-o em uma das seguintes categorias:
+ /* infantil A	=	5	-   7	anos	
+	infantil B	=	8	-	10	anos	
+	juvenil	 A	=	11	-	13	anos	
+	juvenil	 B	=	14	-	17	anos
+	adulto	=	maiores	de	18	anos */
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL,"Portuguese");
+
+int idade;
+
+printf("Digite sua idade: \n");
+scanf("%d", &idade);
+
+	if (idade >= 5 && idade <=7)
+{
+	printf("Idade %d: de 5 - 7 Anos\n", idade);
+	printf("Categoria - infantil-A\n");
+}
+	if (idade >=8 && idade <= 10)
+	{
+	printf("Idade %d: de 8 - 10 Anos\n", idade);
+	printf("Categoria - infantil-B\n");
+	}
+	if (idade >=11 && idade <= 13)
+	{
+	printf("Idade %d: de 11 - 13 Anos\n", idade);
+	printf("Categoria - juvenil-A\n");
+	}
+	if (idade >=14 && idade <= 17)
+	{
+	printf("Idade %d: de 14 - 17 Anos\n", idade);
+	printf("Categoria - juvenil-B\n");
+	}
+	if (idade >= 18)
+	{
+		printf("Idade %d: maiores de 18 anos\n", idade);
+		printf("Categoria - adulto\n");
+	}
+	return 0;
+}
+*/
+
+/*
+//6. Escreva um algoritmo que leia o código de um aluno e suas três notas. Calcule a média ponderada do aluno, considerando que o peso para a maior nota seja 4 e para as duas restantes, 3. Mostre o código do aluno, suas três notas, a média calculada e a mensagem "APROVADO" se a média for maior ou igual a 5 e "REPROVADO" caso contrário.
+
+int main()
+{
+   setlocale(LC_ALL,"Portuguese");
+   
+    int codigo;
+    int nota1;
+    int nota2;
+    int nota3;
+    int media;
+	
+    printf("Digite o codigo de matricula:\n");
+    scanf("%d", &codigo);
+	printf("Digite sua primeira nota: \n");
+	scanf("%d", &nota1);
+	printf("Digite sua segunda nota: \n");
+	scanf("%d", &nota2);
+	printf("Digite sua terceira nota: \n");
+	scanf("%d", &nota3);
+	
+	media = ((nota1*4)+(nota2*3)+(nota3*3))/10;
+    
+    printf("Codigo do aluno: %d\n", codigo);
+    printf("Primeira nota: %d\n", nota1);
+    printf("Segunda nota: %d\n", nota2);
+    printf("Terceira nota: %d\n", nota3);
+	if (media <= 4)
+	{
+		printf("Reprovado com media : %d\n", media);
+	}
+	else
+	{
+	printf("Aprovado com media: %d\n", media);
+	}
+    return 0;
+}
+*/
+
+/*
+//Faça um algoritmo que leia um número inteiro e mostre uma mensagem indicando se este número é par ou ímpar, e se é positivo, negativo ou zero. 
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL,"Portuguese");
+
+int numero;
+
+printf("Digite um numero:\n");
+scanf("%d", &numero);
+
+	if (numero == 0)
+	{
+	printf("O número é o proprio %d\n", numero);
+	}
+	else {
+		if(numero %2 == 0)
+		{
+			printf("O número é par\n");
+		}
+		else
+		{
+			printf("O número é impar");
+		}
+	}
+	if(numero > 0)
+	{
+	printf("O número %d é positivo\n", numero);
+	}
+	if(numero < 0)
+	{
+	printf("O número %d é negativo\n", numero);
+	}
+	return 0;
+}
+*/

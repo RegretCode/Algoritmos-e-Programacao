@@ -1,0 +1,92 @@
+// exercicio 6
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+
+int v;
+int b;
+
+b = 0;
+
+while (b == 0)
+{
+
+
+printf ("Digite um valor: \n");
+scanf ("%d", &v);
+
+
+
+if (v > 10)
+{ 
+printf ("É MAIOR QUE 10 \n");
+}
+
+if( v < 10)
+{
+printf ("É MENOR QUE 10\n");
+}
+}
+
+}
+
+// exercicio 7
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int a, b;
+
+printf ("Digite um valor: \n");
+scanf ("%d", &a);
+printf ("Digite outro valor: \n");
+scanf ("%d", &b);
+
+if (a == b) 
+{
+printf ("Não são considerados valores iguais");
+}
+if (a < b)
+{
+printf ("Em ordem crescente %d e %d", a, b);
+
+}
+if (a > b)
+{
+printf ("Em ordem crescente %d e %d", b, a);
+
+}
+}
+
+//exercicio 8
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+	setlocale(LC_ALL,"Portuguese");
+	
+	int n;
+	
+	printf ("Digite um numero: \n");
+	scanf ("%d", &n);
+	
+	if (n < 0)
+	{
+		printf ("O numero %d é negativo \n", n);
+	}
+	if (n >=0)
+	{
+	printf ("O numero %d é positivo \n", n);
+	}
+	
+	
+	return 0;
+}
